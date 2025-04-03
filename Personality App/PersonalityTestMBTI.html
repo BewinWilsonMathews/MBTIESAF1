@@ -1,0 +1,358 @@
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Personality Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            text-align: left;
+            color: black;
+        }
+        h3 {
+            text-align: center;
+        }
+@media screen and (max-width: 768px) {
+    h3 {
+        font-size: 16px; /* Reduce the size of h3 text */
+    }
+}
+/* Default styling for all screens */
+.question {
+    margin-bottom: 10px; /* Reduce space between questions */
+    padding-left: 10px; /* Bring text closer to the left margin */
+}
+
+.choices {
+    padding-left: 10px; /* Reduce left padding */
+    margin-bottom: 5px; /* Reduce space between options */
+}
+
+.choices label {
+    padding: 8px; /* Adjust padding for readability */
+    margin: 3px 0; /* Reduce spacing between choices */
+            display: block;
+            padding: 10px;
+            background: #f0f0f0;
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+}
+
+/* Laptop View: Screens wider than 768px */
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 15px; /* Reduce container padding */
+    }
+
+    .question {
+        margin-bottom: 12px; /* Adjust spacing */
+        padding-left: 8px; /* Bring closer to left */
+    }
+
+    .choices {
+        padding-left: 8px; /* Align options closer */
+        margin-bottom: 6px; /* Adjust spacing */
+    }
+}
+
+/* Mobile View: Screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 3px; /* Reduce padding inside the container */
+    }
+
+    .question {
+        margin-bottom: 8px; /* Further reduce space between questions */
+        padding-left: 1px; /* Bring text closer to the left margin */
+    }
+
+    .choices {
+        padding-left: 5px; /* Reduce left padding */
+        margin-bottom: 4px; /* Further reduce space between choices */
+    }
+
+    .choices label {
+        padding: 6px; /* Reduce padding inside options */
+        margin: 2px 0; /* Reduce spacing between choices */
+    }
+}
+        .choices label:hover {
+            background: #d9d9d9;
+        }
+
+.intro-text {
+    font-size: 18px; /* Default size for laptop */
+    text-align: center; /* Keep it centered */
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .intro-text {
+        font-size: 14px; /* Smaller text for mobile */
+    }
+}
+
+
+.link-text {
+    font-size: 14px; /* Default size for laptop */
+    text-align: center; /* Keep it centered */
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .link-text {
+        font-size: 10px; /* Smaller text for mobile */
+    }
+}
+
+
+.intiative-text {
+    font-size: 14px; /* Default size for laptop */
+    text-align: center; /* Keep it centered */
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .intiative-text {
+        font-size: 10px; /* Smaller text for mobile */
+    }
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo-container img {
+    max-width: 45%; /* Ensures they don't shrink too much */
+}
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+/* Default styling for all screens */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Laptop view (Screens wider than 1024px) */
+@media screen and (min-width: 1024px) {
+    .logo-container img {
+        width: 180px; /* Adjust size for laptops */
+        height: auto;
+    }
+}
+
+/* Mobile view (Screens narrower than 768px) */
+@media screen and (max-width: 768px) {
+    .logo-container {
+        flex-direction: row
+        align-items: center;
+    }
+
+    .logo-container img {
+        width: 80%; /* Adjust width for mobile */
+        max-width: 100px; /* Prevents excessive stretching */
+        margin-right: 5px
+    }
+}
+/* Default text size for laptop and larger screens */
+.question h4 {
+    font-size: 18px; /* Normal size for laptops */
+}
+
+.choices label {
+    font-size: 16px; /* Normal size for laptops */
+}
+
+/* Reduce text size only in mobile view (screens smaller than 768px) */
+@media screen and (max-width: 768px) {
+    .question h4 {
+        font-size: 14px; /* Smaller question text */
+    }
+
+    .choices label {
+        font-size: 13px; /* Smaller option text */
+    }
+}
+        #result {
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #ff5e62;
+        }
+        #resultImage {
+            display: block;
+            margin: 20px auto;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+<div class="logo-container">
+    <img src="images/esaf.png" alt="ESAF Logo">
+    <img src="images/bala.jpg" alt="BALA Logo">
+</div>
+<div class="intiative-text" style="text-align:center">
+    This is an initiative of ESAF Balajyothi, a project under ESAF Foundation <br><br>
+</div>
+<div class="intro-text" style= "text-align:center">
+<b>
+    Welcome to MBTI (Myers-Briggs Type Indicator) personality test <br></b>
+</div>
+  <div style="text-align:center">
+<a class="link-text" href="https://www.youtube.com/">Learn more about this scientific test</a>
+</div>
+        <h3>Answer the questions to determine your personality:</h3>
+        <ul id="questions-list"></ul>
+
+        <button onclick="checkResult()">Check Result</button>
+        <p id="result"></p>
+        <img id="resultImage" src=""/>
+    </div>
+
+    <script>
+        const questions = [
+                       { text: "I would rather", options: { N: "Solve a new and complicated problem.", S: "Work on something I have done before." } },
+            { text: "I like to", options: { I: "Work alone in a quiet place.", E: "Be where the action is." } },
+            { text: "I want a boss who", options: { T: "Establishes and applies criteria in decisions.", F: "Considers individual needs and makes exceptions." } },
+            { text: "When I work on a project, I", options: { J: "Like to finish it and get some closure.", P: "Often leave it open for possible changes." } },
+            { text: "When making a decision, the most important considerations are", options: { T: "Rational thoughts, ideas, and data.", F: "People’s feelings and values." } },
+            { text: "On a project, I tend to", options: { N: "Think it over and over before deciding how to proceed.", S: "Start working on it right away, thinking about it as I go along." } },
+            { text: "When working on a project, I prefer to", options: { J: "Maintain as much control as possible.", P: "Explore various options." } },
+            { text: "In my work, I prefer to", options: { P: "Work on several projects at a time and learn as much as possible about each one.", J: "Have one project that is challenging and keeps me busy." } },
+            { text: "I often", options: { J: "Make lists and plans whenever I start something.", P: "Avoid plans and just let things progress as I work on them." } },
+            { text: "When discussing a problem with colleagues, it is easy for me to", options: { N: "See 'the big picture.'", S: "Grasp the specifics of the situation." } },
+            { text: "When the phone rings, I usually", options: { I: "Consider it an interruption.", E: "Don’t mind answering it." } },
+            { text: "Which word describes you better?", options: { T: "Analytical", F: "Empathetic" } },
+            { text: "When working on an assignment, I tend to", options: { S: "Work steadily and consistently.", N: "Work in bursts of energy with ‘down time’ in between." } },
+            { text: "When listening to a talk, I usually", options: { F: "Relate it to my experience.", T: "Assess and analyze the message." } },
+            { text: "When I come up with new ideas, I generally", options: { E: "‘Go for it.’", I: "Like to contemplate the ideas some more." } },
+            { text: "When working on a project, I prefer to", options: { S: "Narrow the scope.", N: "Broaden the scope." } },
+            { text: "When reading something, I usually", options: { S: "Confine my thoughts to the text.", N: "Read between the lines." } },
+            { text: "When making a decision in a hurry, I", options: { P: "Feel uncomfortable and wish for more info.", J: "Am able to decide with available data." } },
+            { text: "In meetings, I tend to", options: { E: "Formulate ideas as I talk.", I: "Think before speaking." } },
+            { text: "At work, I prefer to focus on", options: { T: "Ideas.", F: "People." } },
+            { text: "In meetings, I am most annoyed with", options: { S: "People who bring many sketchy ideas.", N: "People who lengthen meetings with details." } },
+            { text: "I am a", options: { I: "Morning person.", E: "Night owl." } },
+            { text: "When preparing for a meeting, I", options: { P: "Am responsive and flexible.", J: "Like to be fully prepared." } },
+            { text: "In a meeting, I prefer people to", options: { F: "Show emotions.", T: "Be more task-oriented." } },
+            { text: "I prefer to work for an organization where", options: { T: "My job is intellectually stimulating.", F: "I believe in its mission." } },
+            { text: "On weekends, I tend to", options: { J: "Plan what I will do.", P: "Decide as I go." } },
+            { text: "I am more", options: { E: "Outgoing.", I: "Contemplative." } },
+            { text: "I would rather work for a boss who is:", options: { N: "Full of new ideas.", S: "Practical." } },
+            { text: "Choose the word which appeals to you the most", options: { F: "Social.", T: "Theoretical." } },
+            { text: "Choose the word which appeals to you the most", options: { N: "Ingenuity.", S: "Practicality." } },
+            { text: "Choose the word which appeals to you the most", options: { J: "Organized", P: "Adaptable." } },
+            { text: "Choose the word which appeals to you the most", options: { E: "Active.", I: "Concentration." } }
+        ];
+
+        let scores = { I: 0, E: 0, J: 0, P: 0, S: 0, N: 0, T: 0, F: 0 };
+
+        function generateQuestions() {
+            const list = document.getElementById("questions-list");
+            list.innerHTML = ""; // Clear existing questions before generating new ones
+
+            questions.forEach((q, index) => {
+                const li = document.createElement("li");
+                li.classList.add("question");
+                li.innerHTML = `<h4>${index + 1}. ${q.text}</h4>
+                    <ul class="choices">
+                        ${Object.entries(q.options)
+                            .map(([key, value]) => `<li><label><input type="radio" name="q${index}" value="${key}" onchange="updateScore('${key}')" /> ${value}</label></li>`)
+                            .join('')}
+                    </ul>`;
+                list.appendChild(li);
+            });
+        }
+
+        function updateScore(letter) {
+            scores[letter]++;
+        }
+
+        function checkResult() {
+            const personalityType = `${scores.I > scores.E ? "I" : "E"}${scores.S > scores.N ? "S" : "N"}${scores.T > scores.F ? "T" : "F"}${scores.J > scores.P ? "J" : "P"}`;
+            
+            const descriptions = {
+                "ISTJ": "The Logistician - Practical and responsible.",
+                "ISFJ": "The Defender - Protective and loyal.",
+                "INFJ": "The Advocate - Insightful and inspiring.",
+                "INTJ": "The Architect - Strategic and determined.",
+                "ISTP": "The Virtuoso - Bold and experimental.",
+                "ISFP": "The Adventurer - Creative and free-spirited.",
+                "INFP": "The Mediator - Idealistic and kind-hearted.",
+                "INTP": "The Thinker - Curious and analytical.",
+                "ESTP": "The Entrepreneur - Energetic and spontaneous.",
+                "ESFP": "The Entertainer - Fun-loving and sociable.",
+                "ENFP": "The Campaigner - Enthusiastic and imaginative.",
+                "ENTP": "The Debater - Witty and charismatic.",
+                "ESTJ": "The Executive - Organized and efficient.",
+                "ESFJ": "The Consul - Caring and social.",
+                "ENFJ": "The Protagonist - Inspiring and charismatic.",
+                "ENTJ": "The Commander - Bold and strong-willed."
+            };
+
+            const images = {
+                "ISTJ": "images/ISTJ.jpg",
+                "ISFJ": "images/ISFJ.jpg",
+                "INFJ": "images/INFJ.jpg",
+                "INTJ": "images/INTJ.jpg",
+                "ISTP": "images/ISTP.jpg",
+                "ISFP": "images/ISFP.jpg",
+                "INFP": "images/INFP.jpg",
+                "INTP": "images/INTP.jpg",
+                "ESTP": "images/ESTP.jpg",
+                "ESFP": "images/ESFP.jpg",
+                "ENFP": "images/ENFP.jpg",
+                "ENTP": "images/ENTP.jpg",
+                "ESTJ": "images/ESTJ.jpg",
+                "ESFJ": "images/ESFJ.jpg",
+                "ENFJ": "images/ENFJ.jpg",
+                "ENTJ": "images/ENTJ.jpg"
+            };
+
+            document.getElementById("result").innerText = `Your personality type is: ${personalityType}\n${descriptions[personalityType]}`;
+
+            const resultImage = document.getElementById("resultImage");
+            resultImage.src = images[personalityType];
+            resultImage.alt = personalityType;
+            resultImage.style.display = "block"; // Show the image
+        }
+
+        generateQuestions();
+    </script>
+
+</body>
+</html>
